@@ -1,0 +1,65 @@
+[
+    {
+        "name": "VectorFontDataFormat",
+        "options": [
+            "truetype",
+            "opentype"
+        ],
+        "type": "enum"
+    },
+    {
+        "name": "VectorFontData",
+        "fields": [
+            {
+                "type": "pad",
+                "size": 8
+            },
+            {
+                "name": "font family name",
+                "type": "String32",
+                "read_only": true
+            },
+            {
+                "name": "format",
+                "type": "VectorFontDataFormat",
+                "read_only": true
+            },
+            {
+                "type": "pad",
+                "size": 2
+            },
+            {
+                "name": "font data",
+                "type": "Data"
+            },
+            {
+                "name": "resource handle",
+                "type": "Address",
+                "cache_only": true
+            },
+            {
+                "type": "pad",
+                "size": 28
+            },
+            {
+                "name": "fallback font",
+                "type": "TagReference",
+                "groups": [
+                    "vector_font_data"
+                ]
+            },
+            {
+                "type": "pad",
+                "size": 32
+            }
+        ],
+        "type": "struct",
+        "size": 144
+    },
+    {
+        "name": "vector_font_data",
+        "struct": "VectorFontData",
+        "type": "group",
+        "version": 1
+    }
+]

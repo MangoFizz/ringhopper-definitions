@@ -1,0 +1,88 @@
+[
+    {
+        "name": "VectorFontStyle",
+        "fields": [
+            {
+                "name": "data",
+                "type": "TagReference",
+                "groups": [
+                    "vector_font_data"
+                ]
+            },
+            {
+                "name": "hardware format",
+                "type": "Address",
+                "cache_only": true
+            },
+            {
+                "name": "space width",
+                "type": "uint32",
+                "cache_only": true,
+                "comment": "used to calculate the width of the trailing spaces"
+            },
+            {
+                "type": "pad",
+                "size": 8
+            }
+        ],
+        "type": "struct",
+        "size": 32
+    },
+    {
+        "name": "VectorFont",
+        "fields": [
+            {
+                "type": "pad",
+                "size": 8
+            },
+            {
+                "name": "font size",
+                "type": "float"
+            },
+            {
+                "name": "offset x",
+                "type": "float"
+            },
+            {
+                "name": "offset y",
+                "type": "float"
+            },
+            {
+                "type": "pad",
+                "size": 12
+            },
+            {
+                "name": "plain",
+                "type": "VectorFontStyle"
+            },
+            {
+                "name": "bold",
+                "type": "VectorFontStyle"
+            },
+            {
+                "name": "italic",
+                "type": "VectorFontStyle"
+            },
+             {
+                "name": "condense",
+                "type": "VectorFontStyle"
+            },
+            {
+                "name": "underline",
+                "type": "VectorFontStyle"
+            },
+            {
+                "type": "pad",
+                "size": 32
+            }
+        ],
+        "type": "struct",
+        "size": 224
+    },
+    {
+        "name": "vector_font",
+        "struct": "VectorFont",
+        "type": "group",
+        "version": 1
+    }
+]
