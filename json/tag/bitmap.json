@@ -272,6 +272,9 @@
             {
                 "name": "use average color for detail fade",
                 "comment": "Instead of fading to gray, use the average color of the bitmap."
+            },
+            {
+                "name": "force hud use highres scale"
             }
         ],
         "width": 16
