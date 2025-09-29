@@ -263,7 +263,7 @@
         "size": 84
     },
     {
-        "name": "HUDInterfaceMessagingInformation",
+        "name": "HUDInterfaceMessagingIcon",
         "fields": [
             {
                 "name": "sequence index",
@@ -286,12 +286,23 @@
                 "type": "int8"
             },
             {
-                "name": "more flags",
+                "name": "flags",
                 "type": "HUDInterfaceMessagingFlags"
             },
             {
                 "name": "text index",
                 "type": "Index"
+            }
+        ],
+        "type": "struct",
+        "size": 16
+    },
+    {
+        "name": "HUDInterfaceMessagingInformation",
+        "fields": [
+            {
+                "name": "icon",
+                "type": "HUDInterfaceMessagingIcon"
             },
             {
                 "type": "pad",

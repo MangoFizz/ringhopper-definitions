@@ -8,41 +8,6 @@
         "width": 32
     },
     {
-        "name": "HUDGlobalsButtonIcon",
-        "fields": [
-            {
-                "name": "sequence index",
-                "type": "Index"
-            },
-            {
-                "name": "width offset",
-                "type": "int16"
-            },
-            {
-                "name": "offset from reference corner",
-                "type": "Vector2DInt"
-            },
-            {
-                "name": "override icon color",
-                "type": "Pixel32"
-            },
-            {
-                "name": "frame rate",
-                "type": "int8"
-            },
-            {
-                "name": "flags",
-                "type": "HUDInterfaceMessagingFlags"
-            },
-            {
-                "name": "text index",
-                "type": "Index"
-            }
-        ],
-        "type": "struct",
-        "size": 16
-    },
-    {
         "name": "HUDGlobalsAnniversaryRemapTargetLanguage",
         "options": [
             "english",
@@ -248,7 +213,7 @@
             {
                 "name": "button icons",
                 "type": "Reflexive",
-                "struct": "HUDGlobalsButtonIcon",
+                "struct": "HUDInterfaceMessagingIcon",
                 "limit": 18
             }
         ],
