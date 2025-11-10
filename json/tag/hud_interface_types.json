@@ -490,7 +490,8 @@
         "fields": [
             "use text from string list instead",
             "override default color",
-            "width offset is absolute icon width"
+            "width offset is absolute icon width",
+            "use top bound for vertical offset"
         ],
         "width": 8
     },
